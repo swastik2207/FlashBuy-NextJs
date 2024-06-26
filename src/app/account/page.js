@@ -204,8 +204,8 @@ export default function Account() {
             {showAddressForm ? (
               <div className="flex flex-col mt-5 justify-center pt-4 items-center">
                 <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
-                  {addNewAddressFormControls.map((controlItem) => (
-                    <div key={item.id}>
+                  {addNewAddressFormControls.map((controlItem,index) => (
+                    <div key={index}>
                     <InputComponent
                       type={controlItem.type}
                       placeholder={controlItem.placeholder}
