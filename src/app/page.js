@@ -14,7 +14,7 @@ export default function Home() {
   async function getListOfProducts() {
     const res = await getAllProducts();
 
-    if (res.success) {
+    if (res && res.success) {
       setProducts(res.data);
     }
   }

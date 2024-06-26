@@ -205,8 +205,8 @@ export default function Account() {
               <div className="flex flex-col mt-5 justify-center pt-4 items-center">
                 <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
                   {addNewAddressFormControls.map((controlItem) => (
+                    <div key={item.id}>
                     <InputComponent
-                      key={controlItem.id}
                       type={controlItem.type}
                       placeholder={controlItem.placeholder}
                       label={controlItem.label}
@@ -218,6 +218,7 @@ export default function Account() {
                         })
                       }
                     />
+                    </div>
                   ))}
                 </div>
                 <button

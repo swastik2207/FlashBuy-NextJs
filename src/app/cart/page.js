@@ -22,7 +22,7 @@ export default function Cart() {
     setPageLevelLoader(true);
     const res = await getAllCartItems(user?._id);
 
-    if (res.success) {
+    if (res && res.success) {
       const updatedData =
         res.data && res.data.length
           ? res.data.map((item) => ({
@@ -57,7 +57,7 @@ export default function Cart() {
     setComponentLevelLoader({ loading: true, id: getCartItemID });
     const res = await deleteFromCart(getCartItemID);
 
-    if (res.success) {
+    if ( res && res.success) {
       setComponentLevelLoader({ loading: false, id: "" });
       toast.success(res.message, {
         position: toast.POSITION.TOP_RIGHT,

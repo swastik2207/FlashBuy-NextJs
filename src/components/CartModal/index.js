@@ -33,7 +33,7 @@ async function extractAllCartItems() {
                     : item.productID.price,
               },
             }))
-          : [];
+          :[] ;
       setCartItems(updatedData);
       localStorage.setItem("cartItems", JSON.stringify(updatedData));
     }
