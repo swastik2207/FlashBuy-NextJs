@@ -205,8 +205,9 @@ export default function Account() {
               <div className="flex flex-col mt-5 justify-center pt-4 items-center">
                 <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
                   {addNewAddressFormControls.map((controlItem,index) => (
-                    <div key={index}>
+                    
                     <InputComponent
+                     key={index}
                       type={controlItem.type}
                       placeholder={controlItem.placeholder}
                       label={controlItem.label}
@@ -218,7 +219,7 @@ export default function Account() {
                         })
                       }
                     />
-                    </div>
+                    
                   ))}
                 </div>
                 <button
@@ -227,6 +228,7 @@ export default function Account() {
                 >
                   {componentLevelLoader && componentLevelLoader.loading ? (
                     <ComponentLevelLoader
+                  
                       text={"Saving"}
                       color={"#ffffff"}
                       loading={

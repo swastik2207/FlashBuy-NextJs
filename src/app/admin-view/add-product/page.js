@@ -206,6 +206,7 @@ async function handleImage(e){
               />
             ) : controlItem.componentType === "select" ? (
               <SelectComponent
+                key={index}
                 label={controlItem.label}
                 options={controlItem.options}
                 value={formData[controlItem.id]}

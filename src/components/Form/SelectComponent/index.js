@@ -1,4 +1,5 @@
 export default function SelectComponent({
+  key,
     label,
     value,
     onChange,
