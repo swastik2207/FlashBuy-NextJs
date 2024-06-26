@@ -189,9 +189,10 @@ async function handleImage(e){
                   
 
 
-            {adminAddProductformControls.map((controlItem) =>
+            {adminAddProductformControls.map((controlItem,index) =>
             controlItem.componentType === "input" ? (
               <InputComponent
+              key={index}
                 type={controlItem.type}
                 placeholder={controlItem.placeholder}
                 label={controlItem.label}
