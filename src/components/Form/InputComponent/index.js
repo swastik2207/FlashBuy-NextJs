@@ -8,7 +8,7 @@ export default function InputComponent({
   }) {
     console.log(key)
     return (
-      <div className="relative">
+      <div className="relative" key={key}>
         <p className=" pt-0 pr-2 pb-0 pl-2 absolute -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 bg-white">
           {label}
         </p>
